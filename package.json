@@ -1,0 +1,31 @@
+{
+  "name": "saams_controller",
+  "version": "1.0.0",
+  "description": "\"SAAMS_CONTROLLER\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:dev": "pm2 deploy ecosystem.config.js development",
+    "db:migrate:local": "sequelize db:migrate --env local",
+    "db:migrate:undo:local": "sequelize db:migrate:undo --env local",
+    "db:drop:local": "sequelize db:drop --env local",
+    "db:create:local": "sequelize db:create --env local",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.3",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  }
+}
